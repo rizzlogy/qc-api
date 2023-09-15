@@ -51,7 +51,7 @@ module.exports = async (parm) => {
   if (!parm) return { error: 'query_empty' }
   if (!parm.messages || parm.messages.length < 1) return { error: 'messages_empty' }
 
-  let botToken = parm.botToken || process.env.BOT_TOKEN
+  let botToken = global.botToken
 
   const quoteGenerate = new QuoteGenerate(botToken)
 
