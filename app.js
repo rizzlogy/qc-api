@@ -40,7 +40,9 @@ app.use(ratelimit({
 }))
 
 app.use(require('./helpers').helpersApi)
-
+app.get('/', (ctx, next) => {
+    ctx.body = 'Hello World!';
+  })
 const route = new Router()
 
 const routes = require('./routes')
