@@ -33,19 +33,21 @@ app.use(ratelimit({
   max: 20,
   disableHeader: false,
   whitelist: (ctx) => {
-    return ctx.query.botToken === process.env.BOT_TOKEN
+    return ctx.query.botToken === global.botToken
   },
   blacklist: (ctx) => {
   }
 }))
 
 app.use(require('./helpers').helpersApi)
-app.get('/', (ctx, next) => {
-    ctx.body = 'Hello World!';
-  })
+
 const route = new Router()
 
 const routes = require('./routes')
+
+route.get('/', (ctx, next) => {
+    ctx.body = 'Hello World!';
+})
 
 route.use('/*', routes.routeApi.routes())
 
