@@ -19,7 +19,7 @@
   },
   "homepage": "https://github.com/LyoSU/quote-api#readme",
   "dependencies": {
-    "canvas": "2.11.0",
+    "canvas": "https://registry.yarnpkg.com/@favware/skip-dependency/-/skip-dependency-1.2.1.tgz",
     "emoji-db": "^14.0.1",
     "jimp": "^0.16.1",
     "jsdom": "^16.5.3",
