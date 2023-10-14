@@ -1,10 +1,12 @@
+process.env.NODE_TLS_REJECT_UNAUTHORIZED = 0;
 const logger = require('koa-logger')
 const responseTime = require('koa-response-time')
 const bodyParser = require('koa-bodyparser')
 const ratelimit = require('koa-ratelimit')
+const port = process.env.PORT || 3000
 const Router = require('koa-router')
+const fetch = require('node-fetch')
 const Koa = require('koa')
-
 const app = new Koa()
 
 app.use(logger())
@@ -42,19 +44,24 @@ app.use(ratelimit({
 app.use(require('./helpers').helpersApi)
 
 const route = new Router()
-
 const routes = require('./routes')
 
 route.get('/', (ctx, next) => {
-    ctx.body = 'Hello World!';
+     ctx.body = "Server Quoted Chat Online, Please Read Docs Here https://github.com/rizzlogy/qc-api";
 })
 
 route.use('/*', routes.routeApi.routes())
-
 app.use(route.routes())
-
-const port = process.env.PORT || 3000
 
 app.listen(port, () => {
   console.log('Listening on localhost, port', port)
 })
+
+function keepAlive() {
+  const url = `https://${process.env.REPL_SLUG}.${process.env.REPL_OWNER}.repl.co`
+  if (/(\/\/|\.)undefined\./.test(url)) return
+  setInterval(()=> {
+    fetch(url).catch(console.error)
+  }, 5 * 1000 * 60)
+
+  }
