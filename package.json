@@ -1,7 +1,7 @@
 {
   "name": "qc-api",
-  "version": "0.14.0",
-  "description": "",
+  "version": "1.0.0",
+  "description": "API Quoted Chat Telegram Support Replit Host!",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
