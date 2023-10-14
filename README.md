@@ -1,4 +1,4 @@
-# quote-api
+# qc-api
 
 API Quoted Chat Telegram Support Replit Host!
 
@@ -110,4 +110,4 @@ const json = {
 
 ### Response
 
-![Quotly.png](assets/Quotly.png)
+![Quotly.png](assets/quoted-chat.png)
