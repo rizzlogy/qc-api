@@ -96,7 +96,7 @@ const json = {
           "url": avatar
         }
       },
-      "text": "Furry Jir",
+      "text": text,
       "replyMessage": {}
     }
   ]
