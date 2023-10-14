@@ -55,6 +55,7 @@ app.use(route.routes())
 
 app.listen(port, () => {
   console.log('Listening on localhost, port', port)
+  keepAlive()
 })
 
 function keepAlive() {
