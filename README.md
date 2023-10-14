@@ -2,15 +2,15 @@
 
 [![wakatime](https://wakatime.com/badge/github/LyoSU/quote-api.svg)](https://wakatime.com/badge/github/LyoSU/quote-api)
 
-Апи для генерации Telegram цитат
+API Quoted Chat Telegram Support Replit Host!
 
-## Методы
-##### Создание цитаты
-```http
-POST /generate
+## Metode Request
+##### Path Request Only Post!
+```https
+POST https://qc-chat.rizzy.eu.org/generate
 ```
 
-Пример JSON запроса:
+Contoh permintaan JSON:
 ```json
 {
   "type": "quote",
@@ -26,10 +26,10 @@ POST /generate
       "avatar": true,
       "from": {
         "id": 66478514,
-        "first_name": "Yuri 💜",
-        "last_name": "Ly",
-        "username": "LyoSU",
-        "language_code": "ru",
+        "first_name": "RizzyFuzz",
+        "last_name": "RizzyFuzz",
+        "username": "RizzyFuzz",
+        "language_code": "id",
         "title": "Yuri 💜 Ly",
         "photo": {
           "small_file_id": "AQADAgADCKoxG7Jh9gMACBbSEZguAAMCAAOyYfYDAATieVimvJOu7M43BQABHgQ",
@@ -47,7 +47,7 @@ POST /generate
 }
 ```
 
-Медиа:
+Request Media:
 ```json
 {
   "type": "quote",
@@ -91,7 +91,7 @@ POST /generate
 }
 ```
 
-Без Telegram
+Request
 ```json
 {
   "type": "quote",
@@ -121,17 +121,8 @@ POST /generate
 }
 ```
 
-Параметры:
-|  Поле | Тип |  Описание  |
-| :------------ | :------------ | :------------ |
-|  type | string | Тип выходного изображения. Может быть: quote, image, null |
-|  backgroundColor | string | Цвет фона цитаты. Может быть Hex, название или random для случайного цвета |
-|  messages | array | Массив из сообщений |
-| width | number | Максимальная ширина |
-| height | number | Максимальная высота |
-| scale | number | Маcштаб |
-
-Пример ответа:
+Pilihan: | Bidang | Ketik | Deskripsi | | :----------- | :----------- | :----------- | | ketik | tali | Jenis gambar keluaran. Bisa berupa: kutipan, gambar, null | | latar belakangWarna | tali | Warna latar belakang kutipan. Bisa Hex, Nama atau Random untuk Warna Random | | pesan | susunan | Array pesan | | lebar | nomor | Lebar Maks | | tinggi | nomor | Tinggi Maks | | skala | nomor | Skala | 
+Result:
 
 ```json
 {
@@ -146,7 +137,7 @@ POST /generate
 
 ```
 
-## Примеры запросов:
+## Request With Axios
 > JavaScript
 ```js
 const axios = require('axios')
