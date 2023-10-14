@@ -8,7 +8,7 @@ API Quoted Chat Telegram Support Replit Host!
 POST https://qc-chat.rizzy.eu.org/generate
 ```
 
-Options:
+## Options
 |  Body | Type |  Description |
 | :------------ | :------------ | :------------ |
 |  type | string | Output image type. May be: quote, image, null |
