@@ -253,7 +253,7 @@ module.exports = async (parm) => {
 
     let canvasImage = await loadImage(canvasQuote.toBuffer())
 
-    // мінімальний відступ від країв картинки
+    // minimal indentation from the edges of the picture
     const minPadding = 110
 
     // resize canvasImage if it is larger than canvasPic + minPadding
@@ -268,7 +268,7 @@ module.exports = async (parm) => {
       canvasImage = await loadImage(canvasImage)
     }
 
-    // розмістити canvasImage в центрі по горизонталі і вертикалі
+    // place the canvasImage in the center horizontally and vertically
     const imageX = (canvasPic.width - canvasImage.width) / 2
     const imageY = (canvasPic.height - canvasImage.height) / 2
 
