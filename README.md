@@ -6,7 +6,7 @@ API Quoted Chat Telegram Support Replit Host!
 
 ## Metode Request
 ##### Path Request Only Post!
-```https
+```http
 POST https://qc-chat.rizzy.eu.org/generate
 ```
 
