@@ -5,7 +5,7 @@
 ## Metode Request
 ##### Path Request Only Post!
 ```http
-POST https://qc-chat.rizzy.eu.org/generate
+POST https://qc-api.rizzlogy.repl.co/generate
 ```
 
 ## Options
@@ -27,7 +27,7 @@ const fs = require('fs')
 const text = "Hello World"
 const username = "RizzyFuzz"
 const avatar =  "https://telegra.ph/file/b10b6d0ab3ef16e126cf5.jpg"
-const baseurl = "https://qc-chat.rizzy.eu.org/generate"
+const baseurl = "https://qc-api.rizzlogy.repl.co/generate"
 
 const json = {
   "type": "quote",
@@ -52,8 +52,11 @@ const json = {
     }
   ]
 };
-        const response = axios.post(baseurl, json, {
-        headers: {'Content-Type': 'application/json'}
+
+const response = axios.post(baseurl, json, {
+        headers: {
+        'Content-Type': 'application/json'
+}
 }).then(res => {
     const buffer = Buffer.from(res.data.result.image, 'base64')
        fs.writeFile('Quotly.png', buffer, (err) => {
@@ -70,7 +73,7 @@ const text = "Hello World"
 const username = "RizzyFuzz"
 const avatar =  "https://telegra.ph/file/b10b6d0ab3ef16e126cf5.jpg"
 const mediaReply = "https://telegra.ph/file/c8d1dbcaafb17d933d306.jpg"
-const baseurl = "https://qc-chat.rizzy.eu.org/generate"
+const baseurl = "https://qc-api.rizzlogy.repl.co/generate"
 
 const json = {
   "type": "quote",
@@ -97,9 +100,12 @@ const json = {
       "replyMessage": {}
     }
   ]
+};
+
+const response = axios.post(baseurl, json, {
+        headers: {
+        'Content-Type': 'application/json'
 }
-        const response = axios.post(baseurl, json, {
-        headers: {'Content-Type': 'application/json'}
 }).then(res => {
     const buffer = Buffer.from(res.data.result.image, 'base64')
        fs.writeFile('Quotly.png', buffer, (err) => {
