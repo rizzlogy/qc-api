@@ -6,14 +6,13 @@ const ratelimit = require('koa-ratelimit')
 const port = process.env.PORT || 3000
 const Router = require('koa-router')
 const fetch = require('node-fetch')
+const ratelimitВb = new Map()
 const Koa = require('koa')
 const app = new Koa()
 
 app.use(logger())
 app.use(responseTime())
 app.use(bodyParser())
-
-const ratelimitВb = new Map()
 
 app.use(ratelimit({
   driver: 'memory',
