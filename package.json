@@ -33,6 +33,7 @@
     "lottie-web": "^5.7.8",
     "lru-cache": "^5.1.1",
     "object-sizeof": "^1.6.0",
+    "node-fetch": "^2.6.4",
     "runes": "^0.4.3",
     "sharp": "^0.31.3",
     "smartcrop-sharp": "^2.0.7",
