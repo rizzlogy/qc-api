@@ -5,7 +5,7 @@
 ## Metode Request
 ##### Path Request Only Post!
 ```http
-POST https://qc-api.rizzlogy.repl.co/generate
+POST https://qc-api.rizzy.eu.org/generate
 ```
 
 ## Options
@@ -27,7 +27,7 @@ const fs = require('fs')
 const text = "Hello World"
 const username = "RizzyFuzz"
 const avatar =  "https://telegra.ph/file/b10b6d0ab3ef16e126cf5.jpg"
-const baseurl = "https://qc-api.rizzlogy.repl.co/generate"
+const baseurl = "https://qc-api.rizzy.eu.org/generate"
 
 const json = {
   "type": "quote",
@@ -73,7 +73,7 @@ const text = "Hello World"
 const username = "RizzyFuzz"
 const avatar =  "https://telegra.ph/file/b10b6d0ab3ef16e126cf5.jpg"
 const mediaReply = "https://telegra.ph/file/c8d1dbcaafb17d933d306.jpg"
-const baseurl = "https://qc-api.rizzlogy.repl.co/generate"
+const baseurl = "https://qc-api.rizzy.eu.org/generate"
 
 const json = {
   "type": "quote",
