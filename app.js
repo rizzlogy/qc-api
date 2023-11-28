@@ -1,4 +1,3 @@
-process.env.NODE_TLS_REJECT_UNAUTHORIZED = 0;
 const logger = require('koa-logger')
 const responseTime = require('koa-response-time')
 const bodyParser = require('koa-bodyparser')
